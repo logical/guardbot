@@ -1,0 +1,27 @@
+#!/bin/bash
+ 
+
+
+source ./isplogin
+
+subject="ALARM EMAIL"
+body="These images where taken by the camera"
+declare -a attachments
+attachments=( $(ls ./*.jpg) )
+
+declare -a attargs
+
+
+for att in "${attachments[@]}"; do
+  sendEmail -f "guardbot@homenetwork.net" -t "$myemail" -s "$isp" -u "$subject" -m "$body" -a  "$att" -xu "$userid" -xp "$passwd" 
+done
+
+
+
+
+savepath="./backup"
+
+
+
+mv *.jpg "$savepath/"
+

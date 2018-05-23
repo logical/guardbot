@@ -1,0 +1,9 @@
+#!/bin/bash
+
+#savepath="/media/New Volume"
+aplay 20seconds.wav&
+
+#for image in *.jpg
+#do
+#  cp "$image" "$savepath/$(basename "$image" .jpg).jpg"
+#done
