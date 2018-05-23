@@ -176,7 +176,7 @@ void loop() {
     }
   
   
-    mfrc522.PICC_DumpMifareUltralightToSerial1(); //This is a modifier dunp just cghange the for cicle to < 232 instead of < 16 in order to see all the pages on NTAG216//
+    PICC_DumpMifareUltralightToSerial1(); //This is a modifier dunp just cghange the for cicle to < 232 instead of < 16 in order to see all the pages on NTAG216//
     mfrc522.PICC_HaltA();
     mfrc522.PCD_SoftPowerDown();
     digitalWrite(RST_PIN,false);
